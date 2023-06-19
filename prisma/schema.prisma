@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Vacancy {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  number     Int
+  coords     String   @unique()
+  isOccupied Boolean  @default(false)
+  created_at DateTime @default(now())
+
+  vacancy_history     VacancyHistory[]
+}
+
+model VacancyHistory {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  vacancy_id String   
+  vehicle_id String
+  start_date DateTime @default(now())
+  end_date   DateTime?
+  created_at DateTime @default(now())
+
+  vacancy Vacancy @relation(fields: [vacancy_id], references: [id])
+}
+
+model VacancyReservation {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  vacancy_id String   @unique
+  vehicle_id String
+  created_at DateTime @default(now())
+}

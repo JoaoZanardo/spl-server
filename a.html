@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empresa XYZ - Apresentação</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #835AE7;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #444444;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .feature-list {
+      list-style-type: none;
+      margin-bottom: 20px;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .feature-list li::before {
+      content: "\2022";
+      color: #835AE7;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #835AE7;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #6A3CB9;
+    }
+
+    .testimonial {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .testimonial p {
+      color: #444444;
+    }
+
+    .testimonial-author {
+      margin-top: 10px;
+      font-style: italic;
+      color: #777777;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .logo img {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo da Empresa XYZ">
+    </div>
+    <h1>Bem-vindo(a) à Empresa XYZ</h1>
+    <p>Somos uma empresa líder no mercado, oferecendo soluções inovadoras para nossos clientes.</p>
+    <div class="testimonial">
+      <p>"A Empresa XYZ superou todas as minhas expectativas. Seus serviços são excelentes e sua equipe é altamente profissional."</p>
+      <p class="testimonial-author">- João Silva, CEO da Empresa ABC</p>
+    </div>
+    <h2>Nossos serviços:</h2>
+    <ul class="feature-list">
+      <li>Desenvolvimento de produtos personalizados</li>
+      <li>Consultoria estratégica</li>
+      <li>Suporte técnico especializado</li>
+      <li>Soluções de integração de sistemas</li>
+    </ul>
+    <p>Estamos comprometidos em fornecer resultados excepcionais para nossos clientes, utilizando tecnologia de ponta e uma equipe de profissionais altamente qualificados.</p>
+    <p>Entre em contato conosco para saber mais sobre como podemos ajudar o seu negócio a alcançar o sucesso.</p>
+    <a href="contato.html" class="cta-button">Entre em contato</a>
+  </div>
+</body>
+
+</html>
