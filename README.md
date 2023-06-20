@@ -28,3 +28,5 @@ Siga as instruções abaixo para configurar e executar o servidor:
 - Configure as variáveis de ambiente no arquivo .env com as informações relevantes para sua aplicação.
 - Execute o servidor utilizando o comando `npm run dev`.
 - Certifique-se de ter o Node.js e o MongoDB devidamente instalados em seu ambiente de desenvolvimento.
+
+**Esse código é apenas uma parte de um projeto maior e faz parte de um sistema mais complexo de controle de estacionamento. Para obter mais detalhes e contexto sobre o projeto, é recomendável verificar o repositório completo do código-fonte, que pode ser encontrado [aqui](https://github.com/JoaoZanardo/SPL).**
