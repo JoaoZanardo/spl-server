@@ -1,17 +1,15 @@
 import { app } from "./config/app";
 import { Server } from 'socket.io';
 import { parser, port } from "./config/arduino";
+import { env } from "./config/env"
 
 const server = app.listen(8080, () => {
   console.log('Server running on port 8080');
 });
 
-//casa -> 192.168.0.148
-const baseUrlIPV4 = 'http://172.17.121.70';
-
 const io = new Server(server, {
   cors: {
-    origin: `${baseUrlIPV4}:5173`,
+    origin: `${env.baseUrl}:5173`,
     methods: ["GET", "POST"]
   }
 });

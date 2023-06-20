@@ -24,7 +24,7 @@ Siga as instruções abaixo para configurar e executar o servidor:
 
 - Clone este repositório para sua máquina local.
 - Acesse a pasta do servidor (server).
-- Instale as dependências necessárias executando o comando npm install.
+- Instale as dependências necessárias executando o comando `npm install`.
 - Configure as variáveis de ambiente no arquivo .env com as informações relevantes para sua aplicação.
-- Execute o servidor utilizando o comando npm start.
+- Execute o servidor utilizando o comando `npm run dev`.
 - Certifique-se de ter o Node.js e o MongoDB devidamente instalados em seu ambiente de desenvolvimento.
