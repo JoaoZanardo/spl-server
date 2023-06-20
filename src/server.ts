@@ -7,7 +7,7 @@ const server = app.listen(8080, () => {
 });
 
 //casa -> 192.168.0.148
-const baseUrlIPV4 = 'http://192.168.0.148';
+const baseUrlIPV4 = 'http://172.17.121.70';
 
 const io = new Server(server, {
   cors: {
@@ -17,14 +17,11 @@ const io = new Server(server, {
 });
 
 parser.on('data', data => {
-  if (!String(data).startsWith('{')) console.log({ data });
   if (!String(data).startsWith('{')) return;
   io.emit('data', JSON.parse(data));
 });
 
 io.on('connection', async (socket) => {
-  console.log('a user connected');
-
   socket.on('vacancyClicked', (id: string) => {
     socket.broadcast.emit('changeVacancyColor', id);
   });

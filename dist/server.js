@@ -16,7 +16,7 @@ const server = app_1.app.listen(8080, () => {
     console.log('Server running on port 8080');
 });
 //casa -> 192.168.0.148
-const baseUrlIPV4 = 'http://192.168.0.148';
+const baseUrlIPV4 = 'http://172.17.121.70';
 const io = new socket_io_1.Server(server, {
     cors: {
         origin: `${baseUrlIPV4}:5173`,
@@ -24,8 +24,6 @@ const io = new socket_io_1.Server(server, {
     }
 });
 arduino_1.parser.on('data', data => {
-    if (!String(data).startsWith('{'))
-        console.log({ data });
     if (!String(data).startsWith('{'))
         return;
     io.emit('data', JSON.parse(data));

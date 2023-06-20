@@ -73,7 +73,6 @@ export const setRoutes = (app: Express) => {
         number: vacancy_number
       }
     });
-    console.log({ vacancy });
     if (!vacancy) return;
     const vacancyHistories = await prisma.vacancyHistory.findMany({
       where: {
@@ -81,7 +80,6 @@ export const setRoutes = (app: Express) => {
       }
     });
     const vacancyHistory = vacancyHistories[vacancyHistories.length - 1];
-    console.log({ vacancyHistory });
     if (!vacancyHistory || vacancyHistory.end_date) return;
     await prisma.vacancy.update({
       where: {
@@ -130,7 +128,6 @@ export const setRoutes = (app: Express) => {
 
   app.get('/search/vehicle/:vehicleId', async (req: Request, res: Response) => {
     const vehicleId = req.params.vehicleId;
-    console.log({ vehicleId });
     if (!vehicleId) return res.status(400).json({});
     const history = await prisma.vacancyHistory.findFirst({
       where: {
